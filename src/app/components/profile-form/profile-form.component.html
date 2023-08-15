@@ -1,0 +1,32 @@
+<div class="profile-page-container center">
+  <form [formGroup]="profileForm" class="form-container">
+    <div class="main-container">
+      <div class="header-container">
+        <h2>Please enter your password</h2>
+        <img class="welcome-img" src="assets/welcome.svg">
+      </div>
+      <!-- Password Component -->
+      <app-form-field>
+        <div class="input-container">
+          <input
+            showError
+            type="password"
+            formControlName="password"
+            placeholder="Password"
+            autocomplete="off"
+            class="pw-input"
+            [type]="showPassword ? 'text' : 'password'"
+          />
+
+        </div>
+      </app-form-field>
+
+      <app-modal></app-modal>
+    </div>
+    <img class="eye" src="assets/eye.svg" (click)="togglePasswordVisibility()"/>
+
+  </form>
+</div>
+
+
+
